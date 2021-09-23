@@ -38,4 +38,8 @@ for target_path in $(find $dotfiles_dir -type f) ; do
   else
     ln -siv $target_path $symlink_path
   fi
+
 done
+
+# Install powerlevel10k
+git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
